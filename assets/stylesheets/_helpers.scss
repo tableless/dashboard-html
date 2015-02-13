@@ -31,6 +31,8 @@ $sidebar-width: 200px;
 ////
 // Functions and Conditionals
 ////
+
+/// Colors in Boxes
 @each $color-name, $color in $colors {
 	.db-box-#{$color-name} {
 		.db-box a:hover {
@@ -43,3 +45,43 @@ $sidebar-width: 200px;
 	}
 }
 
+
+/// Stripes Icons menu sidebar
+$icons-menu: (
+	dashboard: (
+		normal: 0,
+		hover: -27px,
+	), 
+	course: (
+		normal: -66px,
+		hover: -93px,
+	), 
+	exam: (
+		normal: -133px,
+		hover: -160px,
+	), 
+	qa: (
+		normal: -199px,
+		hover: -226px,
+	), 
+	news: (
+		normal: -264px,
+		hover: -291px,
+	), 
+);
+
+@each $icon, $coord in $icons-menu {
+	$normal: map-get($coord, normal);
+	$hover: map-get($coord, hover);
+
+	.db-menu a.db-ico-#{$icon} {
+		&:before {
+			background-position: 0 $normal
+		}
+
+		&:hover:before {
+			background-position: 0 $hover
+		}
+	}
+
+}
