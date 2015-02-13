@@ -1,0 +1,45 @@
+////
+// Colors default
+////
+$colors: (
+	green: #2ecc71,
+	darkgreen: #16a085,
+	lightgray: #dee1e2,
+	orange: #e67333,
+	purple: #8e44ad,
+);
+
+$green: map-get($colors, green);
+$darkgreen: map-get($colors, darkgreen);
+$lightgray: map-get($colors, lightgray);
+$orange: map-get($colors, orange);
+$purple: map-get($colors, purple);
+
+////
+// Measurements
+////
+$sidebar-width: 200px;
+
+////
+// Helpers Placeholders
+////
+%db-img-replacement {
+	text-indent: -999px;
+	overflow: hidden;
+}
+
+////
+// Functions and Conditionals
+////
+@each $color-name, $color in $colors {
+	.db-box-#{$color-name} {
+		.db-box a:hover {
+			box-shadow: inset 5px 0 0 0 $color;
+		}
+
+		.db-active a {
+			color: $color;
+		}
+	}
+}
+
