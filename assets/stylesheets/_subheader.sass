@@ -1,0 +1,107 @@
+
+.db-subheader
+	border-bottom: 1px solid #e5e5e5
+	background: #fff
+	padding: 20px 45px 0
+	position: relative
+	height: 190px
+
+.db-avatar-info
+	img
+		float: left
+		margin-right: 30px
+
+	.db-work
+		font-size: 1rem
+		color: #7f8c8d
+		list-style: none
+
+		li
+			display: inline
+
+		a
+			color: #3498db
+			text-decoration: none
+
+	h1
+		display: inline-block
+		vertical-align: middle
+		color: #2c3e50
+		font-family: helveticaneuebd
+		font-size: 1.5rem
+		margin-right: 10px
+		padding-top: 20px
+
+	.db-stars
+		font-size: 0
+		display: inline-block
+		position: relative
+		top: 7px
+
+		span
+			width: 18px
+			height: 18px
+			display: inline-block
+			background: url(../images/db-stars.png) no-repeat -18px 0
+
+			&.db-star-active
+				background-position: 0 0
+
+	.db-exp
+		color: #9ba3af
+		font-size: 1rem
+		background: url(../images/db-icon-xp.png) no-repeat 
+		padding-left: 15px
+
+
+.db-actions
+	float: right
+
+	li
+		display: inline
+		list-style: none
+
+	a
+		@extend %db-img-replacement
+		width: 39px
+		height: 39px
+		display: inline-block
+		background: url(../images/db-icons-actions.png) no-repeat
+		border: 1px solid #cdd1d7
+		border-radius: 50%
+
+		&:hover
+			background-color: $green
+
+		&.db-ico-edit
+			background-position: 10px -10px
+
+			&:hover
+				background-position: 10px 10px
+
+		&.db-ico-logout
+			background-position: -24px -10px
+
+			&:hover
+				background-position: -24px 10px
+
+.db-menu-content
+	position: absolute
+	bottom: 6px
+
+	li
+		display: inline
+		list-style: none
+		margin-right: 40px
+
+	a
+		padding: 0 10px 5px
+		color: #2c3e50
+		font-size: .88rem
+		text-transform: uppercase
+		text-decoration: none
+		border-bottom: 4px solid #fff
+
+		&:hover,
+		&.db-active
+			border-bottom-color: $green

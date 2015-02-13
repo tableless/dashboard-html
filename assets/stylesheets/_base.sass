@@ -4,95 +4,145 @@
 	box-sizing: border-box
 
 body
+	background: #ecf0f1
 	font: 100% helveticaneue, helvetica, arial, sans-serif
 
-////
-// SIDEBAR
-////
-.db-sidebar
-	background: #34495e
-	position: fixed
-	left: 0
-	top: 0
-	width: $sidebar-width
-	height: 100%
-
-.db-avatar
-	background: $green
-	display: block
-	padding: 20px 15px
-	color: #fff
-	font-size: 0.81rem
-
-	img
-		margin-right: 5px
-		max-width: 50px
-		vertical-align: middle
-
-.db-menu
-	padding-top: 15px
-	
-	a
-		color: #95a5a6
-		text-decoration: none
-		text-transform: uppercase
-		font-size: .88rem
-		padding: 15px 0
-		display: block
-
-		&:before
-			content: ""
-			background: url(../images/db-icons-menu.png)
-			display: inline-block
-			width: 25px
-			height: 25px
-			vertical-align: middle
-			margin: 0 25px
-
-		&:hover,
-		&:active
-			background-color: #243342
-			color: #fff
-
-		&.db-ico-dashboard
-			&:before
-				background-position: 0 0
-
-			&:hover:before
-				background-position: 0 -27px
-
-		&.db-ico-course			
-			&:before
-				background-position: 0 -66px
-
-			&:hover:before
-				background-position: 0 -93px
-
-		&.db-ico-exam
-			&:before
-				background-position: 0 -133px
-
-			&:hover:before
-				background-position: 0 -160px
-
-		&.db-ico-qa
-			&:before
-				background-position: 0 -199px
-
-			&:hover:before
-				background-position: 0 -226px
-
-		&.db-ico-news
-			&:before
-				background-position: 0 -264px
-
-			&:hover:before
-				background-position: 0 -291px
-
-
+img
+	vertical-align: middle
 
 ////
 // CONTAINER
 ////
 .db-container
 	margin-left: $sidebar-width
+
+
+////
+// Content
+////
+.db-content
+	padding: 40px 45px
+
+	.db-box-tabs
+		display: inline-block
+		margin-left: 2%
+		vertical-align: top
+		width: 31.7%
+
+		&.db-box-orange .db-active a
+			color: $orange
+
+		&.db-box-purple .db-active a
+			color: $purple
+
+		&.db-box-darkgreen .db-active a
+			color: $darkgreen
+
+		&:first-child
+			margin-left: 0
+
+.db-box-tab
+	color: #95a5a6
+
+	li
+		text-align: center
+		list-style: none
+		display: inline-block
+		width: 48%
+		font-size: .75rem
+		margin-bottom: -1px
+
+		&.db-active
+			background: #fff
+			border: 1px solid $lightgray
+			border-bottom: none
+			padding: 20px 0
+
+	a
+		color: #95a5a6
+		text-decoration: none
+		text-transform: uppercase
+
+	strong
+		font-size: 2.13rem
+		display: block
+		text-align: center
+
+.db-box
+	background: #fff
+	border: 1px solid $lightgray
+	margin-bottom: 35px
+
+	li
+		border-bottom: 1px solid $lightgray
+		list-style: none
+
+		a
+			line-height: 1
+			padding: 20px 20px 15px
+			display: block
+			text-decoration: none
+			color: #7f8c8d
+
+		&:hover
+			background: #f6f8fc
+
+			.db-box-orange &
+				box-shadow: inset 5px 0 0 0 $orange
+
+			.db-box-purple &
+				box-shadow: inset 5px 0 0 0 $purple
+
+			.db-box-darkgreen &
+				box-shadow: inset 5px 0 0 0 $darkgreen
+
+.db-lnk-show
+	display: block
+	text-align: right
+	color: #2c3e50
+	text-decoration: none
+	font-size: .75rem
+	padding: 10px 20px
+
+	&:after
+		content: ""
+		background: url(../images/db-ico-arrow-down.png) no-repeat 95% center
+		width: 10px
+		height: 10px
+		display: inline-block
+
+.db-graph
+	padding: 20px 25px
+	float: left
+
+	hr
+		border: none
+		background: none
+		height: 1px
+		display: block
+		margin: 15px 0
+		width: 100%
+		border-top: 1px solid $lightgray
+
+.db-friends
+	border-left: 1px solid $lightgray
+	overflow: hidden
+
+
+////
+//	Titles
+////
+[class*="db-title-"]
+	color: #7f8c8d
+	font-weight: normal
+
+.db-title-2
+	font-size: .88rem
+
+	.db-friends &
+		text-transform: uppercase
+		padding: 20px 25px 15px
+		border-bottom: 1px solid $lightgray
+
+.db-title-3
+	font-size: 1rem

@@ -1,0 +1,47 @@
+
+////
+// HEADER
+////
+.db-header
+	background: #fff
+	padding: 20px 25px
+	border-bottom: 1px solid #e5e5e5
+
+	.db-logo
+		text-align: center
+		height: 44px
+
+		a
+			@extend %db-img-replacement
+			height: inherit
+			display: inline-block
+			background: url(../images/db-logo.png) no-repeat
+
+	.db-search
+		float: right
+
+		b
+			display: none
+
+		input[type="text"]
+			border: none
+
+
+	.db-notifications
+		float: left
+		li
+			display: inline-block
+
+		a
+			@extend %db-img-replacement
+			width: 20px
+			height: 20px
+			margin-right: 30px
+			display: inline-block
+			background: url(../images/db-icons-topbar.png) no-repeat
+
+			&.db-ico-messages
+				background-position: -49px 0
+
+			&.db-ico-alerts
+				background-position: -95px 0
